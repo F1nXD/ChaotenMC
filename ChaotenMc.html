@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+    <title>ChaotenMC</title>
+    <style>
+      body{
+          background-image: url("https://img.freepik.com/premium-vector/abstract-blue-green-gradient-color-effect-background-website-banner-poster-paper-card_120819-307.jpg?w=1060");
+          background-size: cover;
+          background-repeat: no-repeat;
+      }
+
+  </style>
+    <style>
+
+      /* Gemeinsame Stilregeln */
+      .tabs-container {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+      }
+  
+      .tab {
+        padding: 10px 20px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-bottom: none;
+      }
+  
+      .tab.active {
+        background-color: #f0f0f0;
+      }
+  
+      /* Stil für den aktiven Tab-Inhalt */
+      .tab-content {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+  
+      .tab-content.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs-container">
+      <!-- Tab 1 -->
+      <div class="tab active" onclick="openTab(event, 'content1')">Über uns</div>
+      <!-- Tab 2 -->
+      <div class="tab" onclick="openTab(event, 'content2')">Socilas</div>
+      <!-- Tab 3 -->
+      <div class="tab" onclick="openTab(event, 'content3')">Voten</div>
+    </div>
+  
+    <!-- Tab-Inhalte -->
+    <div id="content1" class="tab-content active">
+      <h2>Über uns</h2>
+      <p>Das ist der Inhalt der ersten Kartei.</p>
+    </div>
+  
+    <div id="content2" class="tab-content">
+      <h2>Socilas</h2>
+      <p>Youtube:</p> <a href="https://www.youtube.com/watch?v=2L4Qoa6Sixc">ChaotenMC</a>
+      <p>Discord:</p> <a href="https://discord.gg/vNWXPss5">ChaotenMC</a>
+      <p>Wenn du Fragen oder Probleme hast, wende dich auf Discord an playerofiostein oder joine unserem Discord server  </p>
+    </div>
+  
+    <div id="content3" class="tab-content">
+      <h2>Voten</h2>
+      <p>.FinnXD ist cool. Finn am 24 Juli 2023</p>
+    </div>
+  
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabContent, tabLinks;
+        tabContent = document.getElementsByClassName('tab-content');
+        for (i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = 'none';
+        }
+        tabLinks = document.getElementsByClassName('tab');
+        for (i = 0; i < tabLinks.length; i++) {
+          tabLinks[i].classList.remove('active');
+        }
+        document.getElementById(tabName).style.display = 'block';
+        evt.currentTarget.classList.add('active');
+  
+        // Weiterleitung zu einer anderen Webseite
+        if (tabName === 'content3') {
+          window.location.href = 'https://minecraft-server.eu/vote/index/22B3C';
+        
+        }
+      }
+    </script>
+  </body>
+</html>
+
